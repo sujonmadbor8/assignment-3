@@ -1,25 +1,71 @@
 //   https://github.com/sujonmadbor8/assignment-3
 
-// Convert into Kilometer to Meter
-function kilometerToMeter(number){
-    var Kilometer=1000;
+// 1. Convert into Kilometer to Meter program starts from here
+function kilometerToMeter(number) {
+    var Kilometer = 1000;
     var meter = number * Kilometer;
-    return meter;
+    if(number >= 1){
+        return meter;
+    }
+    else{
+    return "Not valid"; //if input digit is negative or others
+    }
 }
-var convertion = kilometerToMeter(5);
+var convertion = kilometerToMeter(2);
 console.log(convertion);
+// ends here 
 
 
-// Make budget Calculator
-function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity){
-    var watchPrice = 50;
-    var watchTotalPrice = watchPrice * watchQuantity;
-    var phonePrice = 100;
-    var phoneTotalPrice = phonePrice * phoneQuantity;
-    var laptopPrice = 500;
-    var laptopTotalPrice = laptopPrice * laptopQuantity;
-    var totalBudget = watchTotalPrice + phoneTotalPrice + laptopTotalPrice;
-    return totalBudget;
+
+// 2. Making budget Calculator program starts from here
+function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity) {
+    if((watchQuantity && phoneQuantity && laptopQuantity) >=1 ){
+        var watchPrice = 50;
+        var watchTotalPrice = watchPrice * watchQuantity;
+        var phonePrice = 100;
+        var phoneTotalPrice = phonePrice * phoneQuantity;
+        var laptopPrice = 500;
+        var laptopTotalPrice = laptopPrice * laptopQuantity;
+        var totalBudget = watchTotalPrice + phoneTotalPrice + laptopTotalPrice;
+        return totalBudget;
+    }
+    else{
+        return "Not valid"; //if input digit is negative or others
+    }
 }
 var budget = budgetCalculator(2, 2, 1);
 console.log(budget);
+// ends here 
+
+
+//  3. hotelCost software to calculate hotel bill program starts from here
+function hotelCost(day) {
+    if (day >= 1 && day <= 10) {
+        return day * 100;
+    } 
+    else if (day >= 11 && day <= 20) {
+        return day * 80;
+    } 
+    else if (day >= 21) {
+        return day * 50;
+    }
+    else{
+        return "not valid"; //if input digit is negative or others
+    }
+}
+var totalCost = hotelCost(55);
+console.log(totalCost);
+
+
+
+// 4. Mega friends problem solving program starts from here
+function megaFriend(stringArray){
+    var max = stringArray[0].length;
+    stringArray.map(v => max = Math.max(max, v.length));
+    var result = stringArray.filter(v=> v.length==max);
+    return result;
+}
+var stringArray = ['sujon', 'rakib', 'afsarul', 'shohag', 'shahidul'];
+var longestWord = megaFriend(stringArray);
+console.log(longestWord);
+// ends here
