@@ -33,7 +33,7 @@ function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity) {
         return "Not valid"; //if input digit is negative or others
     }
 }
-var budget = budgetCalculator(2, 2, 1);
+var budget = budgetCalculator(2, 3, 1);
 console.log(budget);
 // ends here 
 
@@ -60,12 +60,15 @@ console.log(totalCost);
 
 // 4. Mega friends problem solving program starts from here
 function megaFriend(stringArray){
-    var max = stringArray[0].length;
-    stringArray.map(v => max = Math.max(max, v.length));
-    var result = stringArray.filter(v=> v.length==max);
-    return result;
-}
-var stringArray = ['sujon', 'rakib', 'afsarul', 'shohag', 'shahidul'];
+        var arrayMax = stringArray[0];
+    for( i=0; i<stringArray.length; i++){
+        if(stringArray[i].length > arrayMax.length){
+            arrayMax=stringArray[i];
+        }
+    }
+    return arrayMax;
+    }
+var stringArray = ['sujon', 'rakib', 'afsarul', 'shahidul', 'shohag'];
 var longestWord = megaFriend(stringArray);
 console.log(longestWord);
 // ends here
