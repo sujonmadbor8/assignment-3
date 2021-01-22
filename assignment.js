@@ -11,7 +11,7 @@ function kilometerToMeter(number) {
         return "Not valid"; //if input digit is negative or others
     }
 }
-var convertion = kilometerToMeter(2);
+var convertion = kilometerToMeter(5);
 console.log(convertion);
 // ends here
 
@@ -26,14 +26,13 @@ function budgetCalculator(watchQuantity, phoneQuantity, laptopQuantity) {
         var phoneTotalPrice = phonePrice * phoneQuantity;
         var laptopPrice = 500;
         var laptopTotalPrice = laptopPrice * laptopQuantity;
-        var totalBudget = watchTotalPrice + phoneTotalPrice +
-                laptopTotalPrice;
+        var totalBudget = watchTotalPrice + phoneTotalPrice + laptopTotalPrice;
         return totalBudget;
     } else {
         return "Not valid"; //if input digit is negative or others
     }
 }
-var budget = budgetCalculator(2, 3, 1);
+var budget = budgetCalculator(4, 2, 2);
 console.log(budget);
 // ends here
 
@@ -51,7 +50,7 @@ function hotelCost(day) {
         return "not valid"; //if input digit is negative or others
     }
 }
-var totalCost = hotelCost(55);
+var totalCost = hotelCost(50);
 console.log(totalCost);
 // code ends here
 
@@ -68,7 +67,7 @@ function megaFriend(stringArray) {
         }
         return arrayMax;
     } else {
-        return "error";
+        return "error"; // if there is no string this message wiil be show.
     }
 }
 var stringArray = ['sujon', 'rakib', 'afsarul', 'shahidul', 'shohag'];
