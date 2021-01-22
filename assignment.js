@@ -52,7 +52,7 @@ function hotelCost(day) {
 }
 var totalCost = hotelCost(50);
 console.log(totalCost);
-// code ends here
+//  code ends here
 
 
 
@@ -73,4 +73,4 @@ function megaFriend(stringArray) {
 var stringArray = ['sujon', 'rakib', 'afsarul', 'shahidul', 'shohag'];
 var longestWord = megaFriend(stringArray);
 console.log(longestWord);
-// ends here
+//megaFriend program code ends here
